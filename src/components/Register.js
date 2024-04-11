@@ -4,15 +4,15 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const Register = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post('https://bullkallback-2.onrender.com/register', {
-        username,
-        password
+      const response = await axios.post('https://capstone-3-jcg9.onrender.com/register', {
+        email,
+        password,
       });
       alert("User registered successfully")
       localStorage.setItem('token', response.data.token);
@@ -28,9 +28,9 @@ const Register = () => {
       <div>{error && <p>{error}</p>}</div>
       <input
         type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        placeholder="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <br /><br />
       <input

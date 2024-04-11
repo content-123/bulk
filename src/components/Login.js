@@ -9,7 +9,7 @@ import axios from 'axios';
 
 const Login = () => {
   
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   
@@ -23,8 +23,8 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('https://bullkallback-2.onrender.com/login', {
-        username,
+      const response = await axios.post('https://capstone-3-jcg9.onrender.com/login', {
+        email,
         password
       });
       alert("Logged in successfully")
@@ -41,9 +41,9 @@ const Login = () => {
       <div>{error && <p>{error}</p>}</div>
       <input className="textbox"
         type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
+        placeholder="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <br /><br />
       <input className="textbox"

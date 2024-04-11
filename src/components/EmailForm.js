@@ -11,7 +11,7 @@ const EmailForm = () => {
   const handleSendEmail = async () => {
     try {
         
-      const response = await axios.post('https://bullkallback-2.onrender.com/send-bulk-email', {
+      const response = await axios.post('https://capstone-3-jcg9.onrender.com/send-bulk-email', {
         to,
         subject,
         body,
